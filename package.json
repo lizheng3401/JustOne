@@ -1,7 +1,7 @@
 {
   "name": "just-one",
   "version": "1.0.0",
-  "description": "a small project which provide some good words for you",
+  "description": "a small vue project which provides some good words for you",
   "author": "李正 <liz@knownsec.com>",
   "private": true,
   "scripts": {
