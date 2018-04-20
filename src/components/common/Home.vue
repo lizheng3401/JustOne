@@ -8,9 +8,9 @@
     <mu-drawer :open="open">
       <mu-appbar title="JUSTONE"/>
       <mu-list>
-        <mu-list-item title="Menu Item 1"/>
-        <mu-list-item title="Menu Item 2"/>
-        <mu-list-item title="Menu Item 3"/>
+        <mu-list-item title="API"/>
+        <mu-list-item title="You"/>
+        <mu-list-item title="About"/>
         <mu-list-item @click.native="toggle(false)" title="Close"/>
       </mu-list>
     </mu-drawer>
@@ -19,6 +19,9 @@
         <router-view></router-view>
       </transition>
     </div>
+    <footer style="text-align:center;">
+      CopyRight &copy; 2018
+    </footer>
   </div>
 </template>
 

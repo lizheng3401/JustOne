@@ -3,7 +3,7 @@
     <div class="main">
       <h1 style="margin: auto; text-align: center">{{words.hitokoto}}</h1>
       <div style="margin: 10px -100px; text-align:right;">
-        -{{words.from}}
+        <span style="font-size: 20px"><em>----{{words.from}}</em></span>
       </div>
     </div>
     <mu-popup position="top" :overlay="false" popupClass="demo-popup-top" :open="Popup">
@@ -35,7 +35,7 @@ export default {
   methods:{
     getWords(){
       const _this = this
-      getword({}).then( resp =>{
+      getword({c: 'b'}).then( resp =>{
         _this.words = resp.data
       }).catch( error => {
         _this.Popup = true
@@ -44,7 +44,11 @@ export default {
     }
   },
   created(){
-    this.getWords();  
+    const _this = this;
+    _this.getWords();
+    setInterval(function () {
+      _this.getWords();
+    }, 5000);
   }
 }
 </script>
@@ -56,12 +60,24 @@ export default {
   width: 100%;
   margin: 10px;
 }
+.di{
+  filter: brightness(0.6);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url(https://piccdn.freejishu.com/images/2018/03/11/qf3cu.jpg) center no-repeat;
+  background-size: cover;
+}
 .content{
   width: 100%;
+  height: 400px; 
   /* z-index: 1; */
   /* background-image: url(https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302); */
+ 
 }
 .main{
+  max-width: 600px;
   margin: 100px auto;
 }
 .demo-popup-top {
