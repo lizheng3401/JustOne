@@ -2,6 +2,9 @@
   <div class="content">
     <div class="main">
       <h1 style="margin: auto; text-align: center">{{words.hitokoto}}</h1>
+      <div style="margin: 10px -100px; text-align:right;">
+        -{{words.from}}
+      </div>
     </div>
     <mu-popup position="top" :overlay="false" popupClass="demo-popup-top" :open="Popup">
      {{popUpInfo}}
@@ -54,9 +57,9 @@ export default {
   margin: 10px;
 }
 .content{
-  height:80%;
   width: 100%;
-  background-image: url(https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302);
+  /* z-index: 1; */
+  /* background-image: url(https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302); */
 }
 .main{
   margin: 100px auto;
