@@ -1,13 +1,20 @@
 <template>
   <mu-appbar title="JUSTONE">
-    <mu-text-field icon="search" class="appbar-search-field"  slot="right" hintText="请输入搜索内容"/>
-    <mu-flat-button color="white" label="flat Button" slot="right"/>
+    <mu-icon-button icon="menu" @click="setSideBarSiwtch(true)" slot="left"></mu-icon-button>
+    <mu-text-field icon="search" class="appbar-search-field" slot="right" hintText="请输入搜索内容"/>
+    <mu-flat-button color="white" label="Login" slot="right"/>
   </mu-appbar>
 </template>
 
 <script>
+import {mapMutations} from "vuex"
 export default {
-  name: 'top'
+  name: 'top',
+  methods: {
+    ...mapMutations([
+      "setSideBarSiwtch"
+    ]),
+  }
 }
 </script>
 

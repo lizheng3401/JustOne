@@ -1,0 +1,1 @@
+export const SIDEBAR_SWITCH = 'SIDEBAR_SWITCH'
